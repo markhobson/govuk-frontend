@@ -1,0 +1,14 @@
+{% from "../../macros/attributes.njk" import govukAttributes -%}
+{# _rootClass is a private macro option which allows the generic header macro
+to also be used by the 'main' header #}
+{% set rootClass = params._rootClass | default("govuk-generic-header") %}
+
+<div class="{{ rootClass }} {%- if params.classes %} {{ params.classes }}{% endif %}" {{- govukAttributes(params.attributes) }}>
+  <div class="{{ rootClass }}__container {{ params.containerClasses | default("govuk-width-container", true) }}">
+    <div class="{{ rootClass }}__logo">
+      <a href="{{ params.url | default("/", true) }}" class="{{ rootClass }}__homepage-link">
+        {{ params.logoHtml | safe if params.logoHtml else params.logoText }}
+      </a>
+    </div>
+  </div>
+</div>

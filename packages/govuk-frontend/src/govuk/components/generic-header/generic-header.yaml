@@ -1,0 +1,106 @@
+params:
+  - name: url
+    type: string
+    required: false
+    description: The URL of the logo link. Defaults to the root of the current web domain ("/").
+  - name: logoText
+    type: string
+    required: false
+    description: If `logoHtml` is set, this is not required. Text content for the logo section of the generic header.
+  - name: logoHtml
+    type: string
+    required: false
+    description: If `logoText` is set, this is not required.. HTML content for the logo section of the generic header.
+  - name: containerClasses
+    type: string
+    required: false
+    description: Classes for the container, useful if you want to make the header fixed width.
+  - name: classes
+    type: string
+    required: false
+    description: Classes to add to the header container.
+  - name: attributes
+    type: object
+    required: false
+    description: HTML attributes (for example data attributes) to add to the header container.
+
+previewLayout: full-width
+accessibilityCriteria: |
+  Text and links in the Header must:
+  - have a text contrast ratio higher than 4.5:1 against the background colour to meet [WCAG AA](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast)
+
+  Links in the Header must:
+  - accept focus
+  - be focusable with a keyboard
+  - be usable with a keyboard
+  - indicate when they have focus
+  - change in appearance when touched (in the touch-down state)
+  - change in appearance when hovered
+  - have visible text
+
+  Images in the Header must:
+  - be presentational when linked to from accompanying text.
+
+examples:
+  - name: default
+    screenshot: true
+    options:
+      logoText: My cool service
+
+  - name: with image logo
+    options:
+      logoHtml: |
+        <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <title>HM Pizza Finder service</title>
+        <circle cx="13.5549" cy="4.21349" r="4.21349" fill="white"/>
+        <circle cx="13.5549" cy="25.7865" r="4.21349" fill="white"/>
+        <circle cx="22.8963" cy="9.6068" r="4.21349" transform="rotate(90 22.8963 9.6068)" fill="white"/>
+        <circle cx="4.2135" cy="20.3932" r="4.21349" transform="rotate(90 4.2135 20.3932)" fill="white"/>
+        <circle cx="22.8963" cy="20.3932" r="4.21349" transform="rotate(90 22.8963 20.3932)" fill="white"/>
+        <circle cx="4.21351" cy="9.60674" r="4.21349" transform="rotate(90 4.21351 9.60674)" fill="white"/>
+        </svg>
+
+  - name: with text and image logo
+    screenshot: true
+    options:
+      logoHtml: |
+        <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13.5549" cy="4.21349" r="4.21349" fill="white"/>
+        <circle cx="13.5549" cy="25.7865" r="4.21349" fill="white"/>
+        <circle cx="22.8963" cy="9.6068" r="4.21349" transform="rotate(90 22.8963 9.6068)" fill="white"/>
+        <circle cx="4.2135" cy="20.3932" r="4.21349" transform="rotate(90 4.2135 20.3932)" fill="white"/>
+        <circle cx="22.8963" cy="20.3932" r="4.21349" transform="rotate(90 22.8963 20.3932)" fill="white"/>
+        <circle cx="4.21351" cy="9.60674" r="4.21349" transform="rotate(90 4.21351 9.60674)" fill="white"/>
+        </svg> | HM Pizza Finder service
+
+  - name: full width
+    options:
+      containerClasses: govuk-generic-header__container--full-width
+      logoHtml: |
+        <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13.5549" cy="4.21349" r="4.21349" fill="white"/>
+        <circle cx="13.5549" cy="25.7865" r="4.21349" fill="white"/>
+        <circle cx="22.8963" cy="9.6068" r="4.21349" transform="rotate(90 22.8963 9.6068)" fill="white"/>
+        <circle cx="4.2135" cy="20.3932" r="4.21349" transform="rotate(90 4.2135 20.3932)" fill="white"/>
+        <circle cx="22.8963" cy="20.3932" r="4.21349" transform="rotate(90 22.8963 20.3932)" fill="white"/>
+        <circle cx="4.21351" cy="9.60674" r="4.21349" transform="rotate(90 4.21351 9.60674)" fill="white"/>
+        </svg> | HM Pizza Finder service
+
+  # Hidden examples are not shown in the review app, but are used for tests and HTML fixtures
+  - name: attributes
+    hidden: true
+    options:
+      logoText: Some logo text
+      attributes:
+        data-test-attribute: value
+        data-test-attribute-2: value-2
+  - name: classes
+    hidden: true
+    options:
+      logoText: Some logo text
+      classes: app-header--custom-modifier
+  - name: custom url
+    hidden: true
+    options:
+      logoText: Some logo text
+      url: 'https://www.pizza.gov.uk'
