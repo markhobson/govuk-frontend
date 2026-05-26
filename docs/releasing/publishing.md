@@ -21,7 +21,7 @@ Developers must pair on releases, so do not publish on your own. You should crea
 2. Open the [**Actions** tab](https://github.com/alphagov/govuk-frontend/actions) on the `alphagov/govuk-frontend` repo.
 
 3. Select the [RELEASE: Build release workflow](https://github.com/alphagov/govuk-frontend/actions/workflows/build-release.yml) and run the workflow:
-   1. Set the **Use workflow from** select field to `main`.
+   1. Set the **Use workflow from** select field to `main` or the `support/*` branch you're releasing from.
    2. Set the **Environment** select field to `production`.
    3. Set the **Release Type** select field to the version change, for example `major`.
    4. For pre-releases, set the **Prerelease label** input field, for example `beta`.
