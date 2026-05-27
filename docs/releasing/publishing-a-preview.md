@@ -34,9 +34,9 @@ Projects can point to this branch in their package.json, instead of to the publi
 
 1. If you need to update an existing project to use the preview, copy the command that displays after the `Success!` message.
 
-1. Navigate to the project in the command line and run the success notification command - running this command makes the project point to the preview branch, instead of to the published [GOV.UK Frontend npm package](https://www.npmjs.com/package/govuk-frontend).
+2. Navigate to the project in the command line and run the success notification command - running this command makes the project point to the preview branch, instead of to the published [GOV.UK Frontend npm package](https://www.npmjs.com/package/govuk-frontend).
 
-1. You can now preview your trial changes to GOV.UK Frontend.
+3. You can now preview your trial changes to GOV.UK Frontend.
 
 ## Update a preview
 
