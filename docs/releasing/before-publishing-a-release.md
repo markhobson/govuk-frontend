@@ -50,3 +50,5 @@ At this stage, the developer leading the release should agree on the publishing 
 - developers for changes to GOV.UK Frontend
 - technical writer for release notes
 - content designer, community manager and technical writer for announcements and engagement activities
+
+Once you’re ready to publish the release, read the documentation on [publishing a new version of GOV.UK Frontend](/docs/releasing/publishing.md).
